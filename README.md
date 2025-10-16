@@ -51,8 +51,8 @@ import pandas as pd
 file_path = '/content/heart_disease/heart_disease.csv'
 
 # CSV 파일을 DataFrame으로 읽어옵니다.
-df = pd.read_csv(file_path)
+df = pd.read_csv(file_path, encoding = 'cp949')
 
 # 데이터의 첫 5행을 출력하여 잘 불러왔는지 확인합니다.
-print(df.head())
+df.head()
 ```
