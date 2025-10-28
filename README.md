@@ -56,3 +56,10 @@ df = pd.read_csv(file_path, encoding = 'cp949')
 # 데이터의 첫 5행을 출력하여 잘 불러왔는지 확인합니다.
 df.head()
 ```
+
+### 중요
+### 데이터를 변환. 심장병의 유무로 단순화 시키는 것이 좋음.
+```python
+# 0은 그대로, 1~4는 1로 변환
+df[심장병_진단] = df[심장병_진단].apply(lambda x: 1 if x > 0 else 0)
+```
